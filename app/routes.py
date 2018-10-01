@@ -1,4 +1,4 @@
-from app import  app, db
+from app import app, db
 from app.models import User
 from app.forms import LoginForm, RegitrationForm
 from flask import render_template, flash, redirect, url_for, request
@@ -66,3 +66,14 @@ def register():
         flash('Registration successful! Welcome to Microblog!')
         return redirect(url_for('login'))
     return render_template('register.html', title='Regester', form=form)
+
+
+@app.route('/user/<username>')
+@login_required
+def user(username):
+    user = User.query.filter_by(username=username).first_or_404()
+    posts = [
+        {'author': user, 'body': 'Test post #1'},
+        {'author': user, 'body': 'Test post #2'}
+    ]
+    return render_template('user.html', user=user, posts=posts)
