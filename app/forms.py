@@ -1,7 +1,7 @@
 from app.models import User
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, BooleanField
-from wtforms.validators import DataRequired, Email, EqualTo, ValidationError
+from wtforms import StringField, PasswordField, SubmitField, BooleanField, TextAreaField
+from wtforms.validators import DataRequired, Email, EqualTo, ValidationError, Length
 
 
 class LoginForm(FlaskForm):
@@ -17,9 +17,10 @@ class RegitrationForm(FlaskForm):
     password = PasswordField('Password', validators=[DataRequired()])
     password_re = PasswordField(
         'Repeat Password',
-        validators=[DataRequired(),
-                    EqualTo('password',
-                            message='Two passwords do not match!')])
+        validators=[
+            DataRequired(),
+            EqualTo('password', message='Two passwords do not match!')
+        ])
     submit = SubmitField('Submit')
 
     def validate_username(self, username):
@@ -31,3 +32,9 @@ class RegitrationForm(FlaskForm):
         user = User.query.filter_by(email=email.data).first()
         if user:
             raise ValidationError('Please use a different email address.')
+
+
+class EditProfileForm(FlaskForm):
+    username = StringField('Username', validators=[DataRequired()])
+    about_me = TextAreaField('About Me', validators=[Length(min=0, max=140)])
+    submit = SubmitField('Submit')
