@@ -1,0 +1,65 @@
+2018-10-06 16:58:47,510 ERROR: Exception on /edit_profile [GET] [in /home/xzhan/Development/MOOC/Microblog/venv/lib/python3.7/site-packages/flask/app.py:1761
+Traceback (most recent call last):
+  File "/home/xzhan/Development/MOOC/Microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/xzhan/Development/MOOC/Microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/xzhan/Development/MOOC/Microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/xzhan/Development/MOOC/Microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/xzhan/Development/MOOC/Microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/xzhan/Development/MOOC/Microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/xzhan/Development/MOOC/Microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/xzhan/Development/MOOC/Microblog/app/routes.py", line 99, in edit_profile
+    form = EditProfileForm()
+  File "/home/xzhan/Development/MOOC/Microblog/venv/lib/python3.7/site-packages/wtforms/form.py", line 212, in __call__
+    return type.__call__(cls, *args, **kwargs)
+TypeError: __init__() missing 1 required positional argument: 'original_username'
+2018-10-06 16:58:50,569 ERROR: Exception on /edit_profile [GET] [in /home/xzhan/Development/MOOC/Microblog/venv/lib/python3.7/site-packages/flask/app.py:1761
+Traceback (most recent call last):
+  File "/home/xzhan/Development/MOOC/Microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/xzhan/Development/MOOC/Microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/xzhan/Development/MOOC/Microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/xzhan/Development/MOOC/Microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/xzhan/Development/MOOC/Microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/xzhan/Development/MOOC/Microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/xzhan/Development/MOOC/Microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/xzhan/Development/MOOC/Microblog/app/routes.py", line 99, in edit_profile
+    form = EditProfileForm()
+  File "/home/xzhan/Development/MOOC/Microblog/venv/lib/python3.7/site-packages/wtforms/form.py", line 212, in __call__
+    return type.__call__(cls, *args, **kwargs)
+TypeError: __init__() missing 1 required positional argument: 'original_username'
+2018-10-06 17:00:23,582 ERROR: Exception on /edit_profile [GET] [in /home/xzhan/Development/MOOC/Microblog/venv/lib/python3.7/site-packages/flask/app.py:1761
+Traceback (most recent call last):
+  File "/home/xzhan/Development/MOOC/Microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/xzhan/Development/MOOC/Microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/xzhan/Development/MOOC/Microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/xzhan/Development/MOOC/Microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/xzhan/Development/MOOC/Microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/xzhan/Development/MOOC/Microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/xzhan/Development/MOOC/Microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/xzhan/Development/MOOC/Microblog/app/routes.py", line 99, in edit_profile
+    form = EditProfileForm(current_user.username)
+  File "/home/xzhan/Development/MOOC/Microblog/venv/lib/python3.7/site-packages/wtforms/form.py", line 212, in __call__
+    return type.__call__(cls, *args, **kwargs)
+TypeError: __init__() missing 1 required positional argument: 'original_username'
+2018-10-06 17:00:27,206 INFO: Microblog Startup [in /home/xzhan/Development/MOOC/Microblog/app/__init__.py:47
+2018-10-07 20:27:37,645 INFO: Microblog Startup [in /home/xzhan/Development/MOOC/Microblog/app/__init__.py:47

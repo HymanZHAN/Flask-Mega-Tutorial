@@ -1,5 +1,6 @@
 alembic==1.0.0
 Click==7.0
+Faker==0.9.1
 flake8==3.5.0
 Flask==1.0.2
 Flask-Login==0.4.1
@@ -18,6 +19,7 @@ python-dotenv==0.9.1
 python-editor==1.0.3
 six==1.11.0
 SQLAlchemy==1.2.12
+text-unidecode==1.2
 Werkzeug==0.14.1
 WTForms==2.2.1
 yapf==0.24.0

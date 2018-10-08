@@ -11,7 +11,7 @@ class LoginForm(FlaskForm):
     submit = SubmitField('Sign In')
 
 
-class RegitrationForm(FlaskForm):
+class RegistrationForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
     email = StringField('Email', validators=[DataRequired(), Email()])
     password = PasswordField('Password', validators=[DataRequired()])
@@ -38,3 +38,13 @@ class EditProfileForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
     about_me = TextAreaField('About Me', validators=[Length(min=0, max=140)])
     submit = SubmitField('Submit')
+
+    def __init__(self, original_username, *args, **kwargs):
+        super(EditProfileForm, self).__init__(*args, **kwargs)
+        self.original_username = original_username
+
+    def validate_username(self, username):
+        if self.original_username != username.data:
+            user = User.query.filter_by(username=username.data).first()
+            if user:
+                raise ValidationError('Please use a different user name.')
