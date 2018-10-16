@@ -63,3 +63,5 @@ Traceback (most recent call last):
 TypeError: __init__() missing 1 required positional argument: 'original_username'
 2018-10-06 17:00:27,206 INFO: Microblog Startup [in /home/xzhan/Development/MOOC/Microblog/app/__init__.py:47
 2018-10-07 20:27:37,645 INFO: Microblog Startup [in /home/xzhan/Development/MOOC/Microblog/app/__init__.py:47
+2018-10-12 15:46:36,064 INFO: Microblog Startup [in /home/xzhan/Development/MOOC/Microblog/app/__init__.py:47
+2018-10-12 15:46:42,196 INFO: Microblog Startup [in /home/xzhan/Development/MOOC/Microblog/app/__init__.py:47
