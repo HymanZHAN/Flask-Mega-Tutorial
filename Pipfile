@@ -31,6 +31,7 @@ Werkzeug = "==0.14.1"
 WTForms = "==2.2.1"
 
 [dev-packages]
+yapf = "*"
 
 [requires]
 python_version = "3.7"
